@@ -1,18 +1,5 @@
 #!/bin/bash
 
-user="marciii-devpod"
-userpw="passwd"
-
-# add user
-# sudo useradd -m -G wheel -s /bin/zsh $user
-# add password
-# echo "$user:$userpw" | sudo chpasswd
-
-# echo '%wheel ALL=(ALL:ALL) ALL' >/etc/sudoers.d/wheel
-# sudo echo '%wheel ALL=(ALL:ALL) ALL' >/etc/sudoers.d/wheel
-# sudo adduser $user wheel
-#
-#
 
 # Remove home structure
 echo "Remove Structures"
@@ -48,9 +35,14 @@ for package in "${packages[@]}"; do
     sudo apk add "$package"
 done
 
+# install extra packages
+echo "Installing oh-my-posh"
+curl -s https://ohmyposh.dev/install.sh | bash -s
+
+
 echo "All packages have been installed."
 
 cd ~/dotfiles
 stow .
 
-echo "zsh" >>~/.bashrc
+sudo su - vscode
