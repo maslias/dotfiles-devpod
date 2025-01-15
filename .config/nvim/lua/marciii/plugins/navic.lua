@@ -3,7 +3,7 @@ local M = {
 }
 
 function M.config()
-  local icons = require "vscode.extra.icons"
+  local icons = require "marciii.extra.icons"
   require("nvim-navic").setup {
     icons = icons.kind,
     -- highlight = true,

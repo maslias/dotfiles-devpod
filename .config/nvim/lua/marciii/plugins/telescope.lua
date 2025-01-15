@@ -4,7 +4,7 @@ local M = {
 }
 
 function M.config()
-	local icons = require("vscode.extra.icons")
+	local icons = require("marciii.extra.icons")
 	local actions = require("telescope.actions")
 	local builtin = require("telescope.builtin")
 	require("telescope").setup({
@@ -98,7 +98,7 @@ function M.config()
 	})
 
 	-- <leader>fg
-	require("vscode.plugins.tsp-extension.multigrep").setup()
+	require("marciii.plugins.tsp-extension.multigrep").setup()
 
 	vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "telescope: find files" })
 	vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "telescope: open buffers" })

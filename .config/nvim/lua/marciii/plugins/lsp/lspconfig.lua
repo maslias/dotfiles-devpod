@@ -2,7 +2,6 @@ local M = {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
-		{ "saghen/blink.cmp" },
 		{
 			"folke/lazydev.nvim",
 			ft = "lua", -- only load on lua files
@@ -112,7 +111,7 @@ function M.config()
 	-- vim.keymap.set(
 	-- 	"n",
 	-- 	"<leader>lh",
-	-- 	"<cmd>lua require('vscode.plugins.lsp.lspconfig').toggle_inlay_hints()<cr>",
+	-- 	"<cmd>lua require('marciii.plugins.lsp.lspconfig').toggle_inlay_hints()<cr>",
 	-- 	{ desc = "Hints" }
 	-- )
 	-- vim.keymap.set("n", "<leader>ll", "<cmd>lua vim.lsp.codelens.run()<cr>", { desc = "CodeLens Action" })
@@ -127,7 +126,7 @@ function M.config()
 	)
 
 	local lspconfig = require("lspconfig")
-	local icons = require("vscode.extra.icons")
+	local icons = require("marciii.extra.icons")
 
 	local servers = {
 		"lua_ls",
@@ -188,7 +187,7 @@ function M.config()
 			capabilities = M.common_capabilities(),
 		}
 
-		local require_ok, settings = pcall(require, "vscode.plugins.lsp.settings." .. server)
+		local require_ok, settings = pcall(require, "marciii.plugins.lsp.settings." .. server)
 		if require_ok then
 			opts = vim.tbl_deep_extend("force", settings, opts)
 		end

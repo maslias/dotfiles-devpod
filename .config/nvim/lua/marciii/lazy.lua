@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ { import = "vscode.plugins" }, { import = "vscode.plugins.lsp" } }, {
+require("lazy").setup({ { import = "marciii.plugins" }, { import = "marciii.plugins.lsp" } }, {
 	install = {
 		colorscheme = {
     "scottmckendry/cyberdream.nvim",

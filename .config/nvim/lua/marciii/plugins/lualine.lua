@@ -7,7 +7,7 @@ local M = {
 	opts = function()
 		local colors = require("cyberdream.colors").default
 		local cyberdream = require("lualine.themes.cyberdream")
-		local icons = require("vscode.extra.icons")
+		local icons = require("marciii.extra.icons")
 		return {
 			options = {
 				component_separators = { left = "", right = "" },
