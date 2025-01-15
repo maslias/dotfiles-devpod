@@ -27,7 +27,7 @@ to_remove=(
 
 for tr in "${to_remove[@]}"; do
     echo "Remove $tr..."
-    sudo rm -rf "$tr"
+    sudo rm -rf ~/"$tr"
 done
 
 echo "All Removed."
