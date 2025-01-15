@@ -14,7 +14,26 @@ userpw="passwd"
 #
 #
 
+# Remove home structure
+echo "Remove Structures"
+to_remove=(
+    .zshrc
+    .zprofile
+    .oh-my-zsh/
+    .config
+    .bashrc
+    .bash_history
+)
+
+for tr in "${to_remove[@]}"; do
+    echo "Remove $tr..."
+    sudo rm -rf "$tr"
+done
+
+echo "All Removed."
+
 # install packages
+echo "Install packages."
 packages=(
     which
     fzf
