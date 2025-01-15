@@ -26,6 +26,7 @@ packages=(
     ripgrep
     git
     stow
+    neovim
 )
 
 # Iterate over the array and install each package
@@ -43,6 +44,7 @@ echo "All packages have been installed."
 # setup .config
 cd ~/dotfiles
 stow .
+
 
 # change shell
 chsh -s /bin/zsh vscode
