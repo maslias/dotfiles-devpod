@@ -1,10 +1,3 @@
-alias lf="y"
-alias cl="clear"
-alias ls='ls --color'
-alias c='clear'
-alias nv='nvim'
-alias nv.='nvim .'
-alias lg='lazygit'
 
 if command -v kubectl &>/dev/null; then
 alias k="kubectl"

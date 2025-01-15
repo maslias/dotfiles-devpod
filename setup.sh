@@ -13,12 +13,20 @@ userpw="passwd"
 # sudo adduser $user wheel
 #
 #
-#
 
-rm ~/.zshrc
+# install packages
+packages=(
+    which
+    fzf
+    ripgrep
+    git
+    stow
+)
 
-cd ~/dotfiles
-rm -rf .git
+# Iterate over the array and install each package
+for package in "${packages[@]}"; do
+    echo "Installing $package..."
+    sudo apk add "$package"
+done
 
-stow .
-
+echo "All packages have been installed."
