@@ -1,2 +1,2 @@
-require("marciii.core")
-require("marciii.lazy")
+require("vscode.core")
+require("vscode.lazy")
