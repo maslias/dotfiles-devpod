@@ -49,3 +49,8 @@ for package in "${packages[@]}"; do
 done
 
 echo "All packages have been installed."
+
+cd ~/dotfiles
+stow .
+
+echo "zsh" >>~/.bashrc
