@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Remove home structure
 echo "Remove Structures"
 to_remove=(
@@ -39,12 +38,11 @@ done
 echo "Installing oh-my-posh"
 curl -s https://ohmyposh.dev/install.sh | bash -s
 
-
 echo "All packages have been installed."
 
+# setup .config
 cd ~/dotfiles
 stow .
 
 # change shell
 chsh -s /bin/zsh vscode
-
