@@ -45,4 +45,6 @@ echo "All packages have been installed."
 cd ~/dotfiles
 stow .
 
-sudo su - vscode
+# change shell
+chsh -s /bin/zsh vscode
+
