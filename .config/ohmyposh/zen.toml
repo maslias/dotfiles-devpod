@@ -23,7 +23,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     foreground = '#5ea1ff'
     background = 'transparent'
     # template = '{{ .FormattedMs }}'
-    template = '{{ .HostName }}'
+    template = 'devpod-{{ .Env.WORKSPACE_NAME }}'
 
   [[blocks.segments]]
     type = 'session'

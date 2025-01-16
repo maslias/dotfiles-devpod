@@ -29,3 +29,6 @@ export FZF_ALT_C_COMMAND='find . \! \( -type d -path ./.git -prune \) \! \( -typ
 
 #zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+
+#oh my posh variable
+export WORKSPACE_NAME=$(basename $(ls -d /workspaces/*))
